@@ -2,15 +2,27 @@
 
 ## CPE 545 Final Project
 by Kirk Vasilas and Domenic Malfetano
+Run and compiled on windows 10
 
-To Run Server:
-1. To compile, run "javac Server.java"
-2. To run, open a terminal and run "java Server"
-Make note of the IP address printed out by the server
+### Server Side Instructions
+- Compile enter command "javac Server.java"
+- Run file enter command "java Server"
+IMPORTANT: IP address and port are printed when server is run.  Keep those numbers for the client file
 
-To Run Client:
-1. To compile, run "javac Client.java"
-2. To run, open a terminal and run "java Client".
-3. Enter the IP address of the server printed out by the server application
-4. Enter 1099 as the port number 
-5. Enter a Key to get the Result
+### Client Side Instructions
+- Compile enter command "javac Client.java"
+- Run File enter command "java Client"
+- Enter the IP address of the server when prompted
+- Enter the port when prompted
+- Enter name of running back (case sensitive) to get the team he plays for
+
+### Sample Input and Output
+#### Server
+INPUT: java Server
+OUTPUT: Server connection established on: DESKTOP-P7V5KUJ/169.254.159.212:1099
+
+#### Client
+OUTPUT: Enter player name:
+INPUT: Saquon Barkley
+OUTPUT: Team: Giants
+OUTPUT: Saquon Barkley plays for the Giants

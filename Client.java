@@ -3,7 +3,7 @@ import java.rmi.*;
 import java.net.*;
 import java.rmi.registry.*;
 
-public class RoughClient {
+public class Client {
     public static void main(String arg[]){
         Scanner scan = new Scanner(System.in);
         System.out.println("Enter the server address:");
@@ -23,12 +23,14 @@ public class RoughClient {
                 run = 0;
             }
             else{
-                System.out.println("Name: "+ player);
+                //System.out.println("Name: "+ player);
                 try{
                     registry = LocateRegistry.getRegistry(address, port);
                     server = (QueryInterface)(registry.lookup("Server"));
                     String team = server.getTeamForPlayer(player);
-                    System.out.println("Team: "+team+"\n");
+                    team = team.substring(0, team.length() - 2);
+                    System.out.println("Team: " + team);
+                    System.out.println(player + " plays for the "+team+"\n");
                 }
                 catch(RemoteException error){
                     error.printStackTrace();
