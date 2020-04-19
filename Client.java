@@ -28,9 +28,15 @@ public class Client {
                     registry = LocateRegistry.getRegistry(address, port);
                     server = (QueryInterface)(registry.lookup("Server"));
                     String team = server.getTeamForPlayer(player);
-                    team = team.substring(0, team.length() - 2);
-                    System.out.println("Team: " + team);
-                    System.out.println(player + " plays for the "+team+"\n");
+                    if(team.indexOf("spelling") != -1){
+                        System.out.println(team+"\n");
+                    }
+                    else{
+                        team = team.substring(0, team.length() - 2);
+                        System.out.println("Team: " + team);
+                        System.out.println(player + " plays for the " + team + "\n");
+                    }
+                    
                 }
                 catch(RemoteException error){
                     error.printStackTrace();
