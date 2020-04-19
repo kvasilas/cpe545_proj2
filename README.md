@@ -18,11 +18,11 @@ IMPORTANT: IP address and port are printed when server is run.  Keep those numbe
 
 ### Sample Input and Output
 #### Server
-INPUT: java Server
-OUTPUT: Server connection established on: DESKTOP-P7V5KUJ/169.254.159.212:1099
+- INPUT: java Server
+- OUTPUT: Server connection established on: DESKTOP-P7V5KUJ/169.254.159.212:1099
 
 #### Client
-OUTPUT: Enter player name:
-INPUT: Saquon Barkley
-OUTPUT: Team: Giants
-OUTPUT: Saquon Barkley plays for the Giants
+- OUTPUT: Enter player name:
+- INPUT: Saquon Barkley
+- OUTPUT: Team: Giants
+- OUTPUT: Saquon Barkley plays for the Giants
